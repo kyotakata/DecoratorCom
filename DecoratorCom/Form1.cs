@@ -25,6 +25,10 @@ namespace DecoratorCom
             Send(message);
         }
 
+        /// <summary>
+        /// ‹¤’Ê‰»
+        /// </summary>
+        /// <param name="message"></param>
         private void Send(IMessage message)
         {
             if (XORCheckBox.Checked)
