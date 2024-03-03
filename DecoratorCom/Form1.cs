@@ -1,4 +1,5 @@
 using DecoratorCom.Messages;
+using System.Windows.Forms;
 
 namespace DecoratorCom
 {
@@ -14,7 +15,18 @@ namespace DecoratorCom
         {
             var measureId = Convert.ToInt32(textBox1.Text);
             IMessage message = new MeasureMessage(measureId);
+            Send(message);
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var measureId = Convert.ToInt32(textBox1.Text);
+            IMessage message = new StopMessage(measureId);
+            Send(message);
+        }
+
+        private void Send(IMessage message)
+        {
             if (XORCheckBox.Checked)
             {
                 message = new MessageDecoratorXOR(message);
@@ -27,6 +39,7 @@ namespace DecoratorCom
 
 
             listBox1.Items.Add(string.Join("-", message.GetBytes()));
+
         }
     }
 }

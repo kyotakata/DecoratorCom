@@ -33,6 +33,7 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.XORCheckBox = new System.Windows.Forms.CheckBox();
             this.ZipCheckBox = new System.Windows.Forms.CheckBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -68,7 +69,7 @@
             // 
             this.XORCheckBox.AutoSize = true;
             this.XORCheckBox.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.XORCheckBox.Location = new System.Drawing.Point(365, 30);
+            this.XORCheckBox.Location = new System.Drawing.Point(584, 64);
             this.XORCheckBox.Name = "XORCheckBox";
             this.XORCheckBox.Size = new System.Drawing.Size(130, 45);
             this.XORCheckBox.TabIndex = 3;
@@ -79,18 +80,30 @@
             // 
             this.ZipCheckBox.AutoSize = true;
             this.ZipCheckBox.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ZipCheckBox.Location = new System.Drawing.Point(365, 94);
+            this.ZipCheckBox.Location = new System.Drawing.Point(584, 128);
             this.ZipCheckBox.Name = "ZipCheckBox";
             this.ZipCheckBox.Size = new System.Drawing.Size(100, 45);
             this.ZipCheckBox.TabIndex = 4;
             this.ZipCheckBox.Text = "圧縮";
             this.ZipCheckBox.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.Location = new System.Drawing.Point(272, 130);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(214, 56);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "stop";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 488);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.ZipCheckBox);
             this.Controls.Add(this.XORCheckBox);
             this.Controls.Add(this.listBox1);
@@ -110,5 +123,6 @@
         private ListBox listBox1;
         private CheckBox XORCheckBox;
         private CheckBox ZipCheckBox;
+        private Button button2;
     }
 }
