@@ -13,7 +13,13 @@ namespace DecoratorCom
         private void button1_Click(object sender, EventArgs e)
         {
             var measureId = Convert.ToInt32(textBox1.Text);
-            var message = new MeasureMessage(measureId);
+            IMessage message = new MeasureMessage(measureId);
+
+            if (XORCheckBox.Checked)
+            {
+                message = new MessageDecoratorXOR(message);
+            }
+
             listBox1.Items.Add(string.Join("-", message.GetBytes()));
         }
     }
