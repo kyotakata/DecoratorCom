@@ -6,16 +6,14 @@ using System.Threading.Tasks;
 
 namespace DecoratorCom.Messages
 {
-    public sealed class MessageDecoratorZip : IMessage
+    public sealed class MessageDecoratorZip : MessageDecorator
     {
-        private IMessage _child;
 
-        public MessageDecoratorZip(IMessage child)
+        public MessageDecoratorZip(IMessage child) : base(child)
         {
-            _child = child;
         }
 
-        public IEnumerable<byte> GetBytes()
+        public override IEnumerable<byte> GetBytes()
         {
             var result = new List<byte>();
             int index = 0;

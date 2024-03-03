@@ -6,16 +6,14 @@ using System.Threading.Tasks;
 
 namespace DecoratorCom.Messages
 {
-    public sealed class MessageDecoratorXOR : IMessage
+    public sealed class MessageDecoratorXOR : MessageDecorator
     {
-        private IMessage _child;
 
-        public MessageDecoratorXOR(IMessage child)
+        public MessageDecoratorXOR(IMessage child) : base(child)
         {
-            _child = child;
         }
 
-        public IEnumerable<byte> GetBytes()
+        public override IEnumerable<byte> GetBytes()
         {
             var result = new List<byte>();
             foreach (var val in _child.GetBytes())
