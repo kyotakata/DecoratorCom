@@ -32,6 +32,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.XORCheckBox = new System.Windows.Forms.CheckBox();
+            this.ZipCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -74,11 +75,23 @@
             this.XORCheckBox.Text = "暗号化";
             this.XORCheckBox.UseVisualStyleBackColor = true;
             // 
+            // ZipCheckBox
+            // 
+            this.ZipCheckBox.AutoSize = true;
+            this.ZipCheckBox.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ZipCheckBox.Location = new System.Drawing.Point(365, 94);
+            this.ZipCheckBox.Name = "ZipCheckBox";
+            this.ZipCheckBox.Size = new System.Drawing.Size(100, 45);
+            this.ZipCheckBox.TabIndex = 4;
+            this.ZipCheckBox.Text = "圧縮";
+            this.ZipCheckBox.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 488);
+            this.Controls.Add(this.ZipCheckBox);
             this.Controls.Add(this.XORCheckBox);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button1);
@@ -96,5 +109,6 @@
         private Button button1;
         private ListBox listBox1;
         private CheckBox XORCheckBox;
+        private CheckBox ZipCheckBox;
     }
 }
